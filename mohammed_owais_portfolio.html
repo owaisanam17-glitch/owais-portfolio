@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Owais | Future Machine Learning Engineer</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1b2d; --panel2:#10243a; --text:#eef6ff;
+  --muted:#9db2c8; --cyan:#38d9ff; --green:#63e68b; --yellow:#ffd65a;
+  --purple:#a98bff; --border:#1d3853;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:
+  radial-gradient(circle at 15% 10%,#14304d 0,transparent 30%),
+  radial-gradient(circle at 90% 20%,#162849 0,transparent 28%),var(--bg);
+  color:var(--text);line-height:1.6;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;
+  background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
+  background-size:40px 40px;
+}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--border);
+}
+.nav-inner{max-width:1100px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;color:var(--cyan);letter-spacing:.5px}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-weight:700}
+nav a:hover{color:var(--cyan)}
+.container{max-width:1100px;margin:auto;padding:0 22px}
+.hero{min-height:90vh;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center;padding:70px 0}
+.badge{display:inline-block;padding:7px 13px;border:1px solid #24506e;border-radius:99px;color:var(--green);background:#0b2630;font-size:.9rem;font-weight:800}
+h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.95;margin:18px 0}
+.gradient{background:linear-gradient(90deg,var(--cyan),var(--green),var(--yellow));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:900;border:1px solid var(--border);color:var(--text);background:var(--panel)}
+.btn.primary{background:var(--cyan);color:#03101a;border-color:var(--cyan)}
+.avatar-card{background:linear-gradient(145deg,#11283f,#091522);border:1px solid var(--border);border-radius:28px;padding:20px;box-shadow:0 20px 70px #0006;transform:rotate(2deg)}
+.avatar{width:100%;aspect-ratio:1;border-radius:20px;background:#e9e2d2;display:grid;place-items:center;overflow:hidden}
+.avatar svg{width:92%;height:92%}
+.caption{text-align:center;color:var(--muted);font-size:.85rem;margin-top:10px}
+section{padding:80px 0}
+.section-title{font-size:2.3rem;margin:0 0 8px}
+.section-sub{color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,var(--panel),#091522);border:1px solid var(--border);border-radius:20px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#32627e}
+.icon{font-size:2rem;margin-bottom:10px}
+.card h3{margin:5px 0 8px}
+.card p{color:var(--muted)}
+.minecraft{background:#101f16;border-color:#29543a}
+.python{background:#0c1e2a}
+.ml{background:#18152a}
+.progress{height:10px;background:#07101b;border-radius:20px;overflow:hidden;margin:10px 0 18px}
+.progress span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--cyan),var(--green))}
+.skill-row{display:grid;grid-template-columns:120px 1fr 45px;gap:12px;align-items:center;margin:14px 0}
+.skill-row strong{font-size:.9rem}
+.project-image{height:160px;border-radius:15px;background:#16283b;display:grid;place-items:center;overflow:hidden;margin-bottom:15px;border:1px dashed #426078}
+.project-image svg{width:100%;height:100%}
+.timeline{border-left:2px solid #294761;margin:25px 0 0 10px;padding-left:25px}
+.step{position:relative;margin:0 0 30px}
+.step:before{content:"";position:absolute;width:12px;height:12px;background:var(--cyan);border-radius:50%;left:-32px;top:7px;box-shadow:0 0 15px #38d9ff}
+.quote{font-size:1.5rem;text-align:center;color:#d9e8f5;max-width:800px;margin:auto}
+footer{text-align:center;border-top:1px solid var(--border);padding:35px;color:var(--muted)}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:50;place-items:center;padding:20px}
+.modal-box{max-width:520px;background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:30px}
+.close{float:right;background:none;border:0;color:white;font-size:1.5rem;cursor:pointer}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.avatar-card{max-width:430px;margin:auto}}
+@media(max-width:560px){nav .links{display:none}.grid{grid-template-columns:1fr}.skill-row{grid-template-columns:95px 1fr 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">&lt;OWAIS.dev /&gt;</div>
+    <div class="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#future">Future</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+<section class="hero" id="about">
+  <div>
+    <span class="badge">8 YEARS OLD • PYTHON EXPLORER</span>
+    <h1>Hi, I'm <span class="gradient">Mohammed Owais.</span></h1>
+    <p>
+      I love building things, playing games, exploring computers, and learning Python.
+      One day, I want to become a <strong>Machine Learning Engineer</strong> and build smart things with code.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore My Projects</a>
+      <a class="btn" href="#future">My Big Dream →</a>
+    </div>
+  </div>
+
+  <div class="avatar-card">
+    <div class="avatar">
+      <!-- Sketch-style South Asian boy placeholder -->
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="400" fill="#eee6d8"/>
+        <path d="M82 342 Q104 272 200 265 Q296 272 318 342" fill="#23445b" stroke="#182f40" stroke-width="8"/>
+        <path d="M125 188 Q118 87 200 68 Q282 87 275 188 Q265 259 200 277 Q135 259 125 188Z" fill="#b97854" stroke="#26333b" stroke-width="8"/>
+        <path d="M128 157 Q126 72 202 62 Q275 72 274 154 Q248 124 228 111 Q190 141 128 157Z" fill="#1e2227" stroke="#26333b" stroke-width="8"/>
+        <path d="M150 180 Q172 164 190 179" fill="none" stroke="#202b32" stroke-width="7" stroke-linecap="round"/>
+        <path d="M210 179 Q229 164 249 180" fill="none" stroke="#202b32" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="172" cy="181" r="5" fill="#202b32"/><circle cx="229" cy="181" r="5" fill="#202b32"/>
+        <path d="M194 184 Q188 205 198 211" fill="none" stroke="#26333b" stroke-width="5"/>
+        <path d="M168 226 Q200 245 233 226" fill="none" stroke="#26333b" stroke-width="6" stroke-linecap="round"/>
+        <path d="M147 292 L200 325 L253 292" fill="#e7edf0" stroke="#26333b" stroke-width="7"/>
+        <path d="M173 300 L200 325 L227 300" fill="none" stroke="#38a6c5" stroke-width="7"/>
+        <text x="200" y="375" text-anchor="middle" font-family="Arial" font-size="16" fill="#52606a">SKETCH PLACEHOLDER</text>
+      </svg>
+    </div>
+    <div class="caption">Profile sketch placeholder — Mohammed Owais</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">What I Love</h2>
+  <p class="section-sub">The things that make me excited to keep learning.</p>
+  <div class="grid">
+    <article class="card minecraft"><div class="icon">⛏️</div><h3>Minecraft & Games</h3><p>I love exploring worlds, building things, solving challenges and imagining what I could create in my own games.</p></article>
+    <article class="card python"><div class="icon">🐍</div><h3>Python</h3><p>Python is my favourite programming language. I'm learning variables, lists, dictionaries, loops and if/else statements.</p></article>
+    <article class="card ml"><div class="icon">🤖</div><h3>Machine Learning</h3><p>My future goal is to understand how computers can learn from data and build intelligent applications.</p></article>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">My Python Journey</h2>
+  <p class="section-sub">I'm learning one concept at a time and turning each lesson into something I can build.</p>
+  <div class="card">
+    <div class="skill-row"><strong>Variables</strong><div class="progress"><span style="width:92%"></span></div><span>92%</span></div>
+    <div class="skill-row"><strong>Lists</strong><div class="progress"><span style="width:82%"></span></div><span>82%</span></div>
+    <div class="skill-row"><strong>Dictionaries</strong><div class="progress"><span style="width:68%"></span></div><span>68%</span></div>
+    <div class="skill-row"><strong>Loops</strong><div class="progress"><span style="width:75%"></span></div><span>75%</span></div>
+    <div class="skill-row"><strong>If / Else</strong><div class="progress"><span style="width:72%"></span></div><span>72%</span></div>
+    <div class="skill-row"><strong>Game Ideas</strong><div class="progress"><span style="width:55%"></span></div><span>55%</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">My Project Lab</h2>
+  <p class="section-sub">Placeholder projects for the things Mohammed will build as his skills grow.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="project-image">
+        <svg viewBox="0 0 500 220"><rect width="500" height="220" fill="#142b42"/><rect x="0" y="165" width="500" height="55" fill="#1d4b36"/><rect x="65" y="95" width="80" height="70" fill="#7b5b3b"/><rect x="65" y="75" width="80" height="30" fill="#4f8c4a"/><circle cx="365" cy="95" r="42" fill="#ffd65a"/><path d="M250 170 L290 110 L330 170Z" fill="#38d9ff"/></svg>
+      </div>
+      <h3>Treasure Adventure</h3><p>A Python adventure game using lists, dictionaries, loops and decisions.</p>
+      <button class="btn" onclick="openModal('Treasure Adventure','A future game where players explore locations, collect coins, find treasure and make choices.')">View Idea</button>
+    </article>
+    <article class="card">
+      <div class="project-image">
+        <svg viewBox="0 0 500 220"><rect width="500" height="220" fill="#081c2a"/><text x="35" y="55" fill="#63e68b" font-size="24" font-family="monospace">score = 100</text><text x="35" y="100" fill="#38d9ff" font-size="24" font-family="monospace">if score &gt; 90:</text><text x="65" y="145" fill="#ffd65a" font-size="24" font-family="monospace">print("AMAZING!")</text></svg>
+      </div>
+      <h3>Python Game Engine</h3><p>A growing collection of small Python experiments that become bigger games.</p>
+      <button class="btn" onclick="openModal('Python Game Engine','This project will collect mini-games and experiments as Owais learns new Python concepts.')">View Idea</button>
+    </article>
+    <article class="card">
+      <div class="project-image">
+        <svg viewBox="0 0 500 220"><circle cx="250" cy="110" r="55" fill="none" stroke="#a98bff" stroke-width="6"/><circle cx="170" cy="70" r="20" fill="#38d9ff"/><circle cx="330" cy="70" r="20" fill="#63e68b"/><circle cx="165" cy="160" r="20" fill="#ffd65a"/><circle cx="335" cy="160" r="20" fill="#ff8da1"/><path d="M190 80 L225 100 M310 80 L275 100 M190 150 L225 120 M310 150 L275 120" stroke="#b7c8d8" stroke-width="4"/></svg>
+      </div>
+      <h3>My First ML Project</h3><p>A future experiment where a computer learns patterns from data.</p>
+      <button class="btn" onclick="openModal('Machine Learning Lab','When the Python foundations are strong, this project can grow into a first machine learning model.')">View Idea</button>
+    </article>
+  </div>
+</section>
+
+<section id="future">
+  <h2 class="section-title">The Big Dream</h2>
+  <p class="section-sub">A roadmap from curious beginner to future engineer.</p>
+  <div class="timeline">
+    <div class="step"><h3>01 — Learn Python</h3><p>Master the foundations: variables, data types, lists, dictionaries, loops, functions and problem solving.</p></div>
+    <div class="step"><h3>02 — Build Games</h3><p>Turn programming lessons into fun projects that make code feel real and exciting.</p></div>
+    <div class="step"><h3>03 — Discover Data</h3><p>Learn how computers work with numbers, information and patterns.</p></div>
+    <div class="step"><h3>04 — Explore Machine Learning</h3><p>Learn how models can find patterns in data and make predictions.</p></div>
+    <div class="step"><h3>05 — Become a Machine Learning Engineer</h3><p>Build useful intelligent systems and keep learning, experimenting and creating.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <p class="quote">“I don't just want to play games. I want to learn how to build the things inside them.”</p>
+    <p style="text-align:center;color:var(--muted)">— Mohammed Owais</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>Mohammed Owais</strong> · Future Machine Learning Engineer<br>
+  <span>Built as a learning portfolio — the projects will become real as the skills grow.</span>
+</footer>
+
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <button class="btn primary" onclick="closeModal()">Keep Learning!</button>
+  </div>
+</div>
+
+<script>
+function openModal(title,text){
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalText').textContent=text;
+  document.getElementById('modal').style.display='grid';
+}
+function closeModal(e){
+  if(!e || e.target.id==='modal' || e.target.classList.contains('close')){
+    document.getElementById('modal').style.display='none';
+  }
+}
+</script>
+</body>
+</html>
